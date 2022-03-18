@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LogIn</title>
+    <link rel="stylesheet" href="./login.css" />
+    <%-include('partials/BoostrapCss.ejs')%>
+  </head>
+  <body class="background1">
+    <div class="container-fluid">
+      <%- include ('partials/NavBar.ejs')%>
+      <div class="row">
+        <div class="row justify-content-center">
+          <div class="col-4 mx-5 my-5">
+            <div class="shadow-lg p-3 mb-5 bg-body rounded">
+              <h1 class="d-flex justify-content-center">Login</h1>
+              <form action="/LoginValidation" method="POST">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label"
+                    >Email address</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="Email"
+                    aria-describedby="emailHelp"
+                name="Email"
+                    required="required"  />
+                  <div id="emailHelp" class="form-text">
+                    We'll never share your email with anyone else.
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label"
+                    >Password</label
+                  >
+                  <input
+                    type="Password"
+                    class="form-control"
+                    id="Password"
+                    required="required"  
+                    name="Password"/>
+                </div>
+                <div class="mb-3 form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="exampleCheck1"
+                  />
+                  <label class="form-check-label" for="exampleCheck1"
+                    >Check me out</label
+                  >
+                </div>
+             
+                    <div class="mb-3 form-check d-flex justify-content-center">
+                <button type="submit" class="btn btn-outline-success px-5">Log In</button>
+            </div>
+          
+            </form>
+        </div>
+            </div>
+          </div>
+        </div>
+      
+      <%-include('partials/Footer.ejs'); %>
+    </div>
+    <%-include('partials/Boostrapjs.ejs')%>
+  </body>
+</html>
