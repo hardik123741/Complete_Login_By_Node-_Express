@@ -43,4 +43,4 @@ const Registratiion_Model = new mongoose.model(
   Registration_Schema
 );
 
-exports.Registratiion_Model = Registratiion_Model;
+exports .Registratiion_Model = Registratiion_Model;
