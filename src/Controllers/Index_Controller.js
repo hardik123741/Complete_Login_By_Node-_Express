@@ -1,6 +1,5 @@
-const Index_contoller=(req,res)=>{
+const Index_contoller = (req, res) => {
+  res.render("Index");
+};
 
-    res.render("Index");
-    }
-    
-    exports.Index_contoller=Index_contoller;
+exports.Index_contoller = Index_contoller;
