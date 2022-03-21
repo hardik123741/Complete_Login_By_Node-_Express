@@ -15,16 +15,17 @@ const Login_Validation_contoller = async (req, res) => {
       Email: email,
     });
 
-   // const Password_Hash = await bcrypt.hash(Password1, 10);
-
-    console.log(data.Password);
     const macthing = await bcrypt.compare(Password1, data.Password);
     console.log(macthing);
-    res.render("Home");
+    if (macthing === true) {
+      res.cookie("jwt", data.tokens,{httpOnly:true});
+      res.render("Home");
+    } else {
+      res.render("Login");
+    }
   } catch (error) {
     console.log(error);
   }
 };
-
 exports.login_contoller = Login_contoller;
 exports.Login_Validation_contoller = Login_Validation_contoller;

@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const { required } = require("nodemon/lib/config");
 
 const Registration_Schema = new mongoose.Schema({
   FirstName: {
@@ -31,6 +32,10 @@ const Registration_Schema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  tokens: {
+    type: String,
+    required: true,
+  },
 });
 
 const Registratiion_Model = new mongoose.model(
@@ -39,4 +44,3 @@ const Registratiion_Model = new mongoose.model(
 );
 
 exports.Registratiion_Model = Registratiion_Model;
-
